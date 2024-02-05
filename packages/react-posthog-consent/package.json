@@ -10,11 +10,13 @@
         "consent",
         "gdpr"
     ],
+    "homepage": "https://github.com/RockiRider/react-posthog-consent/tree/main/packages/react-posthog-consent",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/RockiRider/react-posthog-consent.git",
         "directory": "packages/react-posthog-consent"
     },
+    
     "scripts": {
         "build": "rollup -c"
     },
