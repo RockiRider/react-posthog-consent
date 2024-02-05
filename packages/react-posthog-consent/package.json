@@ -1,6 +1,6 @@
 {
     "name": "react-posthog-consent",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "license": "MIT",
     "type": "module",
     "keywords": [
@@ -16,7 +16,6 @@
         "url": "git+https://github.com/RockiRider/react-posthog-consent.git",
         "directory": "packages/react-posthog-consent"
     },
-    
     "scripts": {
         "build": "rollup -c"
     },
