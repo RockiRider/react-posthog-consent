@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugin-posthog",
+  "name": "react-posthog-consent-mono",
   "private": true,
   "scripts": {
     "dev": "turbo dev --filter=example-react",
