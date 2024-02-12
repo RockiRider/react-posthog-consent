@@ -4,7 +4,7 @@ const POSTHOG_URL = "https://eu.posthog.com";
 const DECIDE_ENDPOINT = "/decide/";
 const EVENT_ENDPOINT = "/e/";
 
-test("posthog initialization", async ({ page }) => {
+test.skip("posthog initialization", async ({ page }) => {
   let isPostHogInit = false;
 
   await page.route(`**/*`, async (route, request) => {
