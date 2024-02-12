@@ -23,13 +23,17 @@ jobs:
           path: packages/react-posthog-consent/dist
       - name: Create env file
         run: | 
-          cd apps/example-react
+          cd apps/example-core
+          touch .env
+          echo VITE_POSTHOG_KEY=${{secrets.VITE_POSTHOG_KEY}} >> .env
+          echo VITE_APP_TITLE=Example >> .env
+          cd ../example-vite
           touch .env
           echo VITE_POSTHOG_KEY=${{secrets.VITE_POSTHOG_KEY}} >> .env
           echo VITE_APP_TITLE=Example >> .env
           cd ../..
       - name: "Build Vite App"
-        run: npm run example:build
+        run: npm run app:build
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
       - name: Run Playwright tests
