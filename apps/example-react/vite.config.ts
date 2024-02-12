@@ -20,5 +20,8 @@ export default ({ mode }) => {
         },
       }),
     ],
+    preview: {
+      port: 4001,
+    },
   });
 };
