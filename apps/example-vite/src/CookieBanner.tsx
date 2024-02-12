@@ -4,9 +4,16 @@ const CookieBanner = () => {
   const { handleAcceptConsent, handleRejectConsent } = useConsent();
 
   return (
-    <div style={{ backgroundColor: "white", padding: 10 }}>
-      <button onClick={handleAcceptConsent}>Accept</button>
-      <button onClick={handleRejectConsent}>Reject</button>
+    <div
+      style={{ backgroundColor: "white", padding: 10 }}
+      data-testid="consent_banner"
+    >
+      <button onClick={handleAcceptConsent} data-testid="consent_accept_btn">
+        Accept
+      </button>
+      <button onClick={handleRejectConsent} data-testid="consent_reject_btn">
+        Reject
+      </button>
     </div>
   );
 };
