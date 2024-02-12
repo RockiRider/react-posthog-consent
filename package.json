@@ -10,6 +10,8 @@
     "vite:build": "turbo build --filter=example-vite",
     "vite:preview": "turbo preview --filter=example-vite",
     "vite:fpreview": "turbo preview --filter=example-vite --force",
+    "app:build": "turbo build --filter=example-vite --filter=example-core",
+    "app:preview": "turbo preview --filter=example-vite --filter=example-core",
     "build": "turbo build --filter=react-posthog-consent",
     "test": "npx playwright test",
     "test:ui": "npx playwright  --ui",

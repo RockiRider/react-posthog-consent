@@ -1,12 +1,12 @@
-import { useConsent } from "react-posthog-consent/vite";
+import { useConsent } from "react-posthog-consent/core";
 
 const CookieBanner = () => {
-  const { acceptConsent, rejectConsent } = useConsent();
+  const { handleAcceptConsent, handleRejectConsent } = useConsent();
 
   return (
     <div style={{ backgroundColor: "white", padding: 10 }}>
-      <button onClick={acceptConsent}>Accept</button>
-      <button onClick={rejectConsent}>Reject</button>
+      <button onClick={handleAcceptConsent}>Accept</button>
+      <button onClick={handleRejectConsent}>Reject</button>
     </div>
   );
 };

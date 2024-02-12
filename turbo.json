@@ -8,13 +8,22 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
-    "preview": {
-      "dependsOn": ["^build"]
-    },
     "dev": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["react-posthog-consent#build"]
+    },
+    "example-core#build": {
+      "dependsOn": ["react-posthog-consent#build"]
+    },
+    "example-core#preview": {
+      "dependsOn": ["example-core#build"]
+    },
+    "example-vite#build": {
+      "dependsOn": ["react-posthog-consent#build"]
+    },
+    "example-vite#preview": {
+      "dependsOn": ["example-vite#build"]
     }
   }
 }
