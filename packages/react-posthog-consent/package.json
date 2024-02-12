@@ -60,7 +60,7 @@
         "react-dom": "^18.2.0",
         "rollup": "^4.9.5",
         "tslib": "^2.6.2",
-        "vite-plugin-posthog": "^2.0.4"
+        "vite-plugin-posthog": "^2.0.5"
     },
     "dependencies": {
         "universal-cookie": "^7.0.1"
