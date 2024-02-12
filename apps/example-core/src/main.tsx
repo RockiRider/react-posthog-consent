@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./assets/index.css";
-import { ConsentProvider } from "react-posthog-consent/vite";
+import { ConsentProvider } from "react-posthog-consent/core";
 import CookieBanner from "./CookieBanner.tsx";
 
-const COOKIE_PREFIX = "my_app_name";
+const COOKIE_PREFIX = "example_core";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

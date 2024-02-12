@@ -20,7 +20,8 @@
         "build": "rollup -c"
     },
     "exports": {
-        ".": {
+        ".": null,
+        "./core": {
             "import": "./dist/core/index.js"
         },
         "./vite": {

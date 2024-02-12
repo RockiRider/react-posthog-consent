@@ -5,7 +5,7 @@ import "./assets/index.css";
 import { ConsentProvider } from "react-posthog-consent/vite";
 import CookieBanner from "./CookieBanner.tsx";
 
-const COOKIE_PREFIX = "my_app_name";
+const COOKIE_PREFIX = "example_vite";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

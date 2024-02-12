@@ -2,15 +2,12 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./assets/App.css";
-import {
-  useVitePostHog,
-  useFeatureFlagEnabled,
-} from "vite-plugin-posthog/react";
-import { useConsent } from "react-posthog-consent/vite";
+import { usePostHog, useFeatureFlagEnabled } from "posthog-js/react";
+import { useConsent } from "react-posthog-consent/core";
 
 function App() {
   const [count, setCount] = useState(0);
-  const posthog = useVitePostHog();
+  const posthog = usePostHog();
   const showWelcomeMessage = useFeatureFlagEnabled("welcome-msg");
   const { handleReset } = useConsent();
 
