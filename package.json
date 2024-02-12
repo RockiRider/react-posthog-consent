@@ -7,6 +7,10 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "build": "turbo build --filter=react-posthog-consent",
     "example:build": "turbo build --filter=example-react",
+    "preview": "turbo preview --filter=example-react",
+    "fpreview": "turbo preview --filter=example-react --force",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright  --ui",
     "deploy": "bash ./bin/deploy.sh react-posthog-consent"
     
   },
