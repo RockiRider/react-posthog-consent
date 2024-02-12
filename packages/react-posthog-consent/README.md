@@ -87,6 +87,9 @@ const COOKIE_PREFIX = "my_app_name";
 
 const options = {
   api_host: process.env.REACT_APP_PUBLIC_POSTHOG_HOST,
+  autocapture: false,
+  disable_session_recording: true, //This is important
+  opt_out_capturing_by_default: true, //This is important
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
