@@ -18,7 +18,8 @@ export const usePostHogConsent = (config: ConsentConfig) => {
     rejectConsent(config);
   };
 
-  const handleOptIn = () => triggerOptIn(posthog, config);
+  const handleOptIn = (expirationDate?: Date) =>
+    triggerOptIn(posthog, config, expirationDate);
 
   const hasConsent = () => checkHasConsent(config);
 

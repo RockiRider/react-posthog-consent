@@ -7,6 +7,10 @@ export const triggerReset = (
 ) => {
   posthog?.reset();
   if (checkHasConsent(config)) {
-    posthog?.opt_in_capturing();
+    posthog?.opt_in_capturing({
+      cookie_expiration: config.cookie_expiration, //TODO: Fix this to days remaining
+      capture_event_name: config.opt_in_name,
+      capture_properties: config.capture_event_properties,
+    });
   }
 };

@@ -39,11 +39,10 @@ export const ConsentProvider = ({
       const expirationDate = new Date(payload.timestamp);
       //Check the date
       if (currentDate > expirationDate) {
-        console.log(currentDate > expirationDate);
         setShowBanner(true);
       } else {
         if (payload.status) {
-          consentReturn.handleOptIn();
+          consentReturn.handleOptIn(expirationDate);
         }
       }
     }

@@ -6,8 +6,11 @@ export const acceptConsent = (
   posthog: PostHog | null,
   config: ConsentConfig
 ) => {
-  // TODO: COnfigure Opt-in capturing
-  posthog?.opt_in_capturing();
+  posthog?.opt_in_capturing({
+    cookie_expiration: config.cookie_expiration,
+    capture_event_name: config.opt_in_name,
+    capture_properties: config.capture_event_properties,
+  });
   const cookies = configureCookies(config);
   cookies.set(`${getCookiePrefix(config.cookiePrefix)}_consent`, {
     status: true,

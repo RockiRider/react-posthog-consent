@@ -6,6 +6,13 @@
 
 A Package that gives you easy access to better consent management for PostHog. If you want to ensure you are only tracking users who have given consent, this package is for you.
 
+It solves 2 problems for you which you will run into if you follow this official posthog guide for [managing consent in react](https://posthog.com/tutorials/react-cookie-banner).
+
+- You will still be tracking users by default, before they have accepted or rejected consent
+- If you by default disable tracking (to solve the first issue), you will never see the cookie banner because `posthog.has_opted_out_capturing()` will always return true
+
+Using this package will ensure you don't have to use [cookie-less tracking solution with Posthog](https://posthog.com/tutorials/cookieless-tracking), which although will comply with GDPR, it will impose severe limitations.
+
 Supports:
 
 - `vite-plugin-posthog` [Unofficial PostHog Vite SDK](https://www.npmjs.com/package/vite-plugin-posthog)
@@ -80,6 +87,9 @@ const COOKIE_PREFIX = "my_app_name";
 
 const options = {
   api_host: process.env.REACT_APP_PUBLIC_POSTHOG_HOST,
+  autocapture: false,
+  disable_session_recording: true, //This is important
+  opt_out_capturing_by_default: true, //This is important
 }
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
